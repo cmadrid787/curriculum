@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+	width:100%; 
+	overflow:hidden; 
+	background:#332661;
+	margin-bottom:20px;
+}
+
+.wrapper {
+	width:90%; 
+	max-width:1000px; 
+	margin:auto; 
+	overflow:hidden;
+}
+
+header .logo {
+	color:#f2f2f2;
+    border: black 1px;
+	font-size:50px;
+	line-height:100px;
+	float:left;
+}
+
+header nav {
+	float:right;
+	line-height:100px;
+}
+
+header nav a {
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+header nav a:hover {
+	background:#ffffff;
+    color: #332661;
+	border-radius:50px;
+}
+
+.activeNav{
+    border-radius:50px;
+    border: 1px solid rgb(255, 255, 255);
+
+}
+
+/* Inicia animacion logo */
+.logoCAMM {
+    font-size: 23px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+   }
+   
+   .logoCAMM::before {
+    content: " ";
+    margin-top: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 75%;
+    background-color: white;
+    z-index: -1;
+    transition: all 0.5s;
+   }
+   .logoCAMM:hover::before {
+    width: 100%;
+   }
+   .logoCAMM:hover {
+    color: #332661;
+   }
+   .logoCAMM:active:before {
+    background: #b9b9b9;
+   }
+/* Termina animacion logo */
+
+
+/* Inicia boton */
+.button {
+    text-decoration: none;
+    --color: #ffffff;
+    padding: 0.8em 1.7em;
+    background-color: rgb(56, 56, 56);
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   .button::before {
+    top: -1em;
+    left: -1em;
+   }
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   .button:hover {
+    color: rgb(10, 25, 30);
+   }
+   .button:active {
+    filter: brightness(.8);
+   }
+/* Termina boton*/
+
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color:#332661;
+    color: white;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/* CSS para manto/creacion*/
+
+.creacion{
+    width:600px;
+    height:300px;
+    padding:32px;
+    border:1px solid #000;
+    border-radius:10px;
+    background-color:#fff;
+    margin: auto;
+   
+}
+.creacion h1, .creacion h2, .creacion p{
+    font-family:"noto sans", sans-serif;
+    color:#332661 ;
+}
+.creacion h1{
+    font-size:3em;
+    text-align:center;
+    padding:16px;
+}
+.creacion h2{
+    font-size:2em;
+    font-style:italic;
+}
+.creacion p{
+    margin:16px 0;
+    line-height:1.5em;
+}
